@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>Toggle Switch - by @jamiebicknell - Github</title>
+<meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+<meta name='viewport' content='initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no' />
+<link href='./toggle-switch.css' rel='stylesheet' type='text/css' />
+<!--[if lt IE 8]>
+<link href='./toggle-switch.ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<style type='text/css'>
+body {
+    font:bold 0.75em/16px Arial;
+    color:#777;
+}
+.wrapper {
+    margin:120px auto;
+    width:139px;
+}
+.wrapper .row {
+    clear:both;
+    margin:0 0 6px 0;
+    height:16px;
+}
+.wrapper .row label.switch-label {
+    float:left;
+    width:100px;
+}
+.wrapper .row .switch {
+    float:left;
+}
+</style>
+</head>
+<body>
+    
+<div class='wrapper'>
+    <div class='row'>
+        <label for='opt1' class='switch-label'>Option 1</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched'></span>
+            <input type='checkbox' name='opt1' id='opt1' value='1' checked='checked' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt2' class='switch-label'>Option 2</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched off'></span>
+            <input type='checkbox' name='opt2' id='opt2' value='1' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt3' class='switch-label'>Option 3</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched off'></span>
+            <input type='checkbox' name='opt3' id='opt3' value='1' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt4' class='switch-label'>Option 4</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched'></span>
+            <input type='checkbox' name='opt4' id='opt4' value='1' checked='checked' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt5' class='switch-label'>Option 5</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched'></span>
+            <input type='checkbox' name='opt5' id='opt5' value='1' checked='checked' />
+        </div>
+    </div>
+</div>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
+<script type='text/javascript' src='./toggle-switch.js'></script>
+
+</body>
+</html>
