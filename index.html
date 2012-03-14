@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>Toggle Switch - by @jamiebicknell - Github</title>
+<meta http-equiv='Content-Type' content='text/html;charset=utf-8' />
+<meta name='viewport' content='initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no' />
+<link rel='icon' href='http://www.tuesdayscoming.com/favicon.png' type='image/png' />
+<link href='./toggle-switch.css' rel='stylesheet' type='text/css' />
+<!--[if lt IE 8]>
+<link href='./toggle-switch.ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
+<style type='text/css'>
+body {
+    margin:0;
+    padding:25px 0 50px 0;
+    background:#eee;
+    font:0.8em/1em Arial;
+    color:#666;
+}
+a {
+    color:#64B886;
+    text-decoration:none;
+}
+h1 {
+    margin:0 0 8px 0;
+    padding:0;
+    color:#333;
+    font:1.9em/1em Arial;
+}
+h2 {
+    margin:5px 0 0 0;
+    padding:0;
+    color:#888;
+    font:bold 0.95em/1em Arial;
+}
+p {
+    font:1em/1.4em Arial;
+}
+hr {
+    border:0;
+    border-top:1px solid #e5e5e5;
+    clear:both;
+    height:0;
+    display:block;
+    margin:15px 0;
+}
+ul {
+    margin:0;
+    padding:0 0 0 15px;
+}
+ul li {
+    font:1em/1.4em Arial;
+}
+.wrapper {
+    margin:0 auto;
+    width:450px;
+    background:#fff;
+    border:1px solid #ddd;
+    padding:25px;
+    z-index:8;
+}
+.bottom {
+    width:500px;
+    margin:0 auto;
+}
+.bottom div {
+    background:#fff;
+    border:1px solid #ddd;
+    border-top:none;
+    height:1px;
+    overflow:hidden;
+    font:0.01em/0.01em;
+}
+.bottom .bottom1 {
+    margin:0 1px;
+}
+.bottom .bottom2 {
+    margin:0 2px;
+}
+.wrapper .row {
+    clear:both;
+    margin:0 0 6px 0;
+    height:16px;
+    margin:0 auto 6px auto;
+    width:139px;
+}
+.wrapper .row label.switch-label {
+    float:left;
+    width:100px;
+    font:bold 1em/16px Arial;
+}
+.wrapper .row .switch {
+    float:left;
+}
+
+@media screen and (max-device-width:480px) and (orientation:portrait) {
+    body {
+        padding:12px;
+        -webkit-text-size-adjust:none;
+    }
+    .wrapper {
+        width:244px;
+        margin:0 auto;
+    }
+    .bottom {
+        width:296px;
+    }
+}
+
+@media screen and (max-device-width:480px) and (orientation:landscape) {
+    body {
+        padding:12px;
+        -webkit-text-size-adjust:none;
+    }
+    .wrapper {
+        width:404px;
+        margin:0 auto;
+    }
+    .bottom {
+        width:456px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<a href='http://github.com/jamiebicknell/Toggle-Switch'><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+ 
+<div class='wrapper'>
+    <h1>Toggle Switch</h1>
+    <h2>Built by <a href='http://www.twitter.com/jamiebicknell'>@jamiebicknell</a></h2>
+    <hr />
+    <p>This is a pure image based toggle switch powered by jQuery, using zero CSS3 properties and as a result it looks and functions the same in all browsers.</p>
+    <hr />
+    <div class='row'>
+        <label for='opt1' class='switch-label'>Option 1</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched'></span>
+            <input type='checkbox' name='opt1' id='opt1' value='1' checked='checked' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt2' class='switch-label'>Option 2</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched off'></span>
+            <input type='checkbox' name='opt2' id='opt2' value='1' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt3' class='switch-label'>Option 3</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched off'></span>
+            <input type='checkbox' name='opt3' id='opt3' value='1' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt4' class='switch-label'>Option 4</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched'></span>
+            <input type='checkbox' name='opt4' id='opt4' value='1' checked='checked' />
+        </div>
+    </div>
+    <div class='row'>
+        <label for='opt5' class='switch-label'>Option 5</label>
+        <div class='switch'>
+            <div class='overlay'></div>
+            <span class='switched'></span>
+            <input type='checkbox' name='opt5' id='opt5' value='1' checked='checked' />
+        </div>
+    </div>
+    <hr />
+    <p>It utilises a semi transparent PNG overlay to mask the underneath switch image, so the toggling animation remains within the constraints of the rounded rectangle.</p>
+    <p><strong>Features</strong></p>
+    <ul>
+        <li>Compatible in most browsers, including IE6+</li>
+        <li>Retina images for supporting iDevices</li>
+        <li>Uses semi-transparent PNG overlay, so will look the same in all browsers</li>
+        <li>PNG Overlay will need to be updated for use on different backgrounds (PSD Included for both regular and retina images)</li>
+        <li>Switch animates on click of the switch itself or the accompanying label</li>
+    </ul>
+</div>
+<div class='bottom'>
+    <div class='bottom1'></div>
+    <div class='bottom2'></div>
+</div>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
+<script type='text/javascript' src='./toggle-switch.js'></script>
+
+</body>
+</html>
