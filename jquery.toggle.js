@@ -33,7 +33,8 @@
 				if(value.is('.off')) {
 					value.stop().animate({left: 0},150).removeClass('off');
 					check.prop('checked','checked');
-				} else {
+				}
+				else {
 					value.stop().animate({left: options.slide},150).addClass('off');
 					check.prop('checked','');
 				}
