@@ -16,27 +16,59 @@ It utilises a semi transparent PNG overlay to mask the underneath switch image, 
 
 ## Example Usage
 
-    <link href='./toggle-switch.css' rel='stylesheet' type='text/css' />
+Plugin will automatically generate HTML required, and gracefully fall back to a plain old checkbox if JavaScript is disabled. Downside is that there may be a slight flicker between seeing the checkbox and the toggle switch appearing.
+    
+    <link href='./toggleswitch.css' rel='stylesheet' type='text/css' />
     <!--[if lt IE 8]>
-    <link href='./toggle-switch.ie.css' rel='stylesheet' type='text/css' />
+    <link href='./toggleswitch.ie.css' rel='stylesheet' type='text/css' />
     <![endif]-->
 
     <!-- Switch is ON -->
-    <label for='opt1' class='switch-label'>Option 1</label>
+    <label for='opt1'>Option 1</label>
+    <input type='checkbox' name='opt1' id='opt1' value='1' class='toggleswitch' checked='checked' />
+
+    <!-- Switch is OFF -->
+    <label for='opt2'>Option 2</label>
+    <input type='checkbox' name='opt2' id='opt2' value='1' class='toggleswitch' /> 
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+    <script type='text/javascript' src='./jquery.toggleswitch.js'></script>
+    <script type='text/javascript'>
+    jQuery(document).ready(function($) {
+        $('.toggleswitch').toggleSwitch();
+    });
+    </script>
+    
+## Alternative HTML Usage
+
+No flicker between the document loading and toggle switch appearing, but there is no graceful fall back if JavaScript is disabled.
+
+    <link href='./toggleswitch.css' rel='stylesheet' type='text/css' />
+    <!--[if lt IE 8]>
+    <link href='./toggleswitch.ie.css' rel='stylesheet' type='text/css' />
+    <![endif]-->
+    
+    <!-- Switch is ON -->
+    <label for='opt1'>Option 1</label>
     <div class='switch'>
         <div class='overlay'></div>
         <span class='switched'></span>
-        <input type='checkbox' name='opt1' id='opt1' value='1' checked='checked' />
+        <input type='checkbox' name='opt1' id='opt1' value='1' class='toggleswitch' checked='checked' />
     </div>
-
+    
     <!-- Switch is OFF -->
-    <label for='opt2' class='switch-label'>Option 2</label>
+    <label for='opt2'>Option 2</label>
     <div class='switch'>
         <div class='overlay'></div>
         <span class='switched off'></span>
-        <input type='checkbox' name='opt2' id='opt2' value='1' />
+        <input type='checkbox' name='opt2' id='opt2' value='1' class='toggleswitch' />
     </div>
-    
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
-    <script type='text/javascript' src='./toggle-switch.js'></script>
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+    <script type='text/javascript' src='./jquery.toggleswitch.js'></script>
+    <script type='text/javascript'>
+    jQuery(document).ready(function($) {
+        $('.toggleswitch').toggleSwitch();
+    });
+    </script>
    
