@@ -17,58 +17,62 @@ It utilises a semi transparent PNG overlay to mask the underneath switch image, 
 ## Example Usage
 
 Plugin will automatically generate HTML required, and gracefully fall back to a plain old checkbox if JavaScript is disabled. Downside is that there may be a slight flicker between seeing the checkbox and the toggle switch appearing.
-    
-    <link href='./toggleswitch.css' rel='stylesheet' type='text/css' />
-    <!--[if lt IE 8]>
-    <link href='./toggleswitch.ie.css' rel='stylesheet' type='text/css' />
-    <![endif]-->
 
-    <!-- Switch is ON -->
-    <label for='opt1'>Option 1</label>
-    <input type='checkbox' name='opt1' id='opt1' value='1' class='toggleswitch' checked='checked' />
+```html
+<link href='./toggleswitch.css' rel='stylesheet' type='text/css' />
+<!--[if lt IE 8]>
+<link href='./toggleswitch.ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
 
-    <!-- Switch is OFF -->
-    <label for='opt2'>Option 2</label>
-    <input type='checkbox' name='opt2' id='opt2' value='1' class='toggleswitch' /> 
+<!-- Switch is ON -->
+<label for='opt1'>Option 1</label>
+<input type='checkbox' name='opt1' id='opt1' value='1' class='toggleswitch' checked='checked' />
 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
-    <script type='text/javascript' src='./jquery.toggleswitch.js'></script>
-    <script type='text/javascript'>
-    jQuery(document).ready(function($) {
-        $('.toggleswitch').toggleSwitch();
-    });
-    </script>
+<!-- Switch is OFF -->
+<label for='opt2'>Option 2</label>
+<input type='checkbox' name='opt2' id='opt2' value='1' class='toggleswitch' /> 
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+<script type='text/javascript' src='./jquery.toggleswitch.js'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function($) {
+    $('.toggleswitch').toggleSwitch();
+});
+</script>
+```
     
 ## Alternative HTML Usage
 
 No flicker between the document loading and toggle switch appearing, but there is no graceful fall back if JavaScript is disabled.
 
-    <link href='./toggleswitch.css' rel='stylesheet' type='text/css' />
-    <!--[if lt IE 8]>
-    <link href='./toggleswitch.ie.css' rel='stylesheet' type='text/css' />
-    <![endif]-->
-    
-    <!-- Switch is ON -->
-    <label for='opt1'>Option 1</label>
-    <div class='switch'>
-        <div class='overlay'></div>
-        <span class='switched'></span>
-        <input type='checkbox' name='opt1' id='opt1' value='1' class='toggleswitch' checked='checked' />
-    </div>
-    
-    <!-- Switch is OFF -->
-    <label for='opt2'>Option 2</label>
-    <div class='switch'>
-        <div class='overlay'></div>
-        <span class='switched off'></span>
-        <input type='checkbox' name='opt2' id='opt2' value='1' class='toggleswitch' />
-    </div>
+```html
+<link href='./toggleswitch.css' rel='stylesheet' type='text/css' />
+<!--[if lt IE 8]>
+<link href='./toggleswitch.ie.css' rel='stylesheet' type='text/css' />
+<![endif]-->
 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
-    <script type='text/javascript' src='./jquery.toggleswitch.js'></script>
-    <script type='text/javascript'>
-    jQuery(document).ready(function($) {
-        $('.toggleswitch').toggleSwitch();
-    });
-    </script>
+<!-- Switch is ON -->
+<label for='opt1'>Option 1</label>
+<div class='switch'>
+    <div class='overlay'></div>
+    <span class='switched'></span>
+    <input type='checkbox' name='opt1' id='opt1' value='1' class='toggleswitch' checked='checked' />
+</div>
+
+<!-- Switch is OFF -->
+<label for='opt2'>Option 2</label>
+<div class='switch'>
+    <div class='overlay'></div>
+    <span class='switched off'></span>
+    <input type='checkbox' name='opt2' id='opt2' value='1' class='toggleswitch' />
+</div>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+<script type='text/javascript' src='./jquery.toggleswitch.js'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function($) {
+    $('.toggleswitch').toggleSwitch();
+});
+</script>
+```
    
