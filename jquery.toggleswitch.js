@@ -15,23 +15,24 @@ Thanks:     @steve228uk for prop/var mods and plugin suggestion
             }
             obj.parent('div.switch').add($('label[for=' + obj.prop('id') + ']')).click(function (e) {
                 e.preventDefault();
-                var value, check;
-                if ($(this).is('label')) {
-                    value = $('#' + $(this).prop('for')).prev('span.switched');
-                    check = $('#' + $(this).prop('for'));
-                } else {
-                    value = $(this).children('span.switched');
-                    check = $(this).children('input[type=checkbox]');
-                }
-                if (value.is('.off')) {
-                    value.stop().animate({left: 0}, 150).removeClass('off');
-                    check.prop('checked', 'checked');
-                } else {
-                    value.stop().animate({left: -21}, 150).addClass('off');
-                    check.prop('checked', '');
+                if(!obj.prop('disabled')) {
+                    var value, check;
+                    if ($(this).is('label')) {
+                        value = $('#' + $(this).prop('for')).prev('span.switched');
+                        check = $('#' + $(this).prop('for'));
+                    } else {
+                        value = $(this).children('span.switched');
+                        check = $(this).children('input[type=checkbox]');
+                    }
+                    if (value.is('.off')) {
+                        value.stop().animate({left: 0}, 150).removeClass('off');
+                        check.prop('checked', 'checked');
+                    } else {
+                        value.stop().animate({left: -21}, 150).addClass('off');
+                        check.prop('checked', '');
+                    }
                 }
             });
-
         });
     };
 }(jQuery));
