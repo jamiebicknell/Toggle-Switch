@@ -75,4 +75,26 @@ jQuery(document).ready(function($) {
 });
 </script>
 ```
+
+## Options
+
+You can create functions for `onClick`, `onChangeOn`, and `onChangeOff`.
+
+```html
+<script type='text/javascript'>
+jQuery(document).ready(function ($) {
+    $('.toggleswitch').toggleSwitch({
+        onClick: function () {
+            console.log('Toggle Switch was clicked');
+        },
+        onChangeOn: function () {
+            console.log('Toggle Switch was changed to the ON position');
+        },
+        onChangeOff: function () {
+            console.log('Toggle Switch was changed to the OFF position');
+        }
+    });
+});
+</script>
+```
    
