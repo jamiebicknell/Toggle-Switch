@@ -4,7 +4,7 @@ This is a pure image based toggle switch powered by jQuery, using zero CSS3 prop
 
 It utilises a semi transparent PNG overlay to mask the underneath switch image, so the toggling animation remains within the constraints of the rounded rectangle.
 
-**[View the working example](http://jamiebicknell.github.com/Toggle-Switch)**
+**[View the working example](http://jamiebicknell.github.io/Toggle-Switch)**
 
 ## Features
 
