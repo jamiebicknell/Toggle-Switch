@@ -31,11 +31,11 @@ Thanks:     @steve228uk for prop/var mods and plugin suggestion
                         check = $(this).children('input[type=checkbox]');
                     }
                     if (value.is('.off')) {
-                        value.stop().animate({left: 0}, 150).removeClass('off');
+                        value.stop().animate({left: 0}, 150, 'linear').removeClass('off');
                         check.prop('checked', 'checked');
                         settings.onChangeOn.call(obj);
                     } else {
-                        value.stop().animate({left: -21}, 150).addClass('off');
+                        value.stop().animate({left: -21}, 150, 'linear').addClass('off');
                         check.prop('checked', '');
                         settings.onChangeOff.call(obj);
                     }
