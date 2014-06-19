@@ -35,7 +35,7 @@ Plugin will automatically generate HTML required, and gracefully fall back to a 
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 <script type='text/javascript' src='./jquery.toggleswitch.js'></script>
 <script type='text/javascript'>
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     $('.toggleswitch').toggleSwitch();
 });
 </script>
@@ -70,7 +70,7 @@ No flicker between the document loading and toggle switch appearing, but there i
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 <script type='text/javascript' src='./jquery.toggleswitch.js'></script>
 <script type='text/javascript'>
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     $('.toggleswitch').toggleSwitch();
 });
 </script>
