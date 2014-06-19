@@ -97,4 +97,7 @@ jQuery(document).ready(function ($) {
 });
 </script>
 ```
-   
+
+##License
+
+Toggle Switch is licensed under the [MIT license](http://opensource.org/licenses/MIT), see [LICENSE.md](https://github.com/jamiebicknell/Toggle-Switch/blob/master/LICENSE.md) for details.
