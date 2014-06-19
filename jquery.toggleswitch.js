@@ -7,13 +7,14 @@ Thanks:     @steve228uk for prop/var mods and plugin suggestion
 */
 
 (function ($) {
+    'use strict';
     $.fn.toggleSwitch = function (options) {
         var settings = $.extend({
-            onClick: function () {},
-            onChangeOn: function () {},
-            onChangeOff: function () {}
+            onClick: function () { return true; },
+            onChangeOn: function () { return true; },
+            onChangeOff: function () { return true; }
         }, options);
-        $(this).each(function (i) {
+        $(this).each(function () {
             var obj = $(this), status = obj.is(':checked') ? '' : ' off';
             if (!obj.parent('div.switch').length) {
                 obj.wrap('<div class="switch"></div>');
